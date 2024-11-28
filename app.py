@@ -16,8 +16,8 @@ def get_connection():
         database="diabetes_db",
         user="postgres",
         password="swarupa",
-        host="localhost",
-        port="5432"
+        host="4.tcp.ngrok.io",         # Replace with the ngrok public host
+        port="17547"  
     )
 
 def run_query(query):
