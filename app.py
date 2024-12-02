@@ -10,15 +10,16 @@ st.set_page_config(
     layout="wide"
 )
 
-# Database connection
+
 def get_connection():
     return psycopg2.connect(
-        database="diabetes_db",
-        user="postgres",
-        password="swarupa",       # Your password
-        host="0.tcp.ngrok.io",    # Your ngrok public host
-        port="17002"              # Your ngrok public port
+        database="diabetes_db",  # Replace with your database name
+        user="postgres",         # Replace with your PostgreSQL username
+        password="swarupa",      # Replace with your PostgreSQL password
+        host="2.tcp.ngrok.io",   # Use the ngrok public host
+        port="14283"             # Use the ngrok public port
     )
+
 
 
 def run_query(query):
