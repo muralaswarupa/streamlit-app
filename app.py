@@ -147,11 +147,19 @@ elif choice == "Visualize":
     query = st.text_area(
         "Enter your query for visualization:",
         """
-        SELECT age, AVG(br.bmi) AS avg_bmi
-        FROM patients p
-        JOIN bmi_records br ON p.patient_id = br.patient_id
-        GROUP BY age
-        ORDER BY age;
+SELECT 
+    CASE 
+        WHEN age BETWEEN 0 AND 18 THEN '0-18'
+        WHEN age BETWEEN 19 AND 35 THEN '19-35'
+        WHEN age BETWEEN 36 AND 50 THEN '36-50'
+        WHEN age BETWEEN 51 AND 65 THEN '51-65'
+        ELSE '66+' 
+    END AS age_group,
+    COUNT(*) AS patient_count
+FROM patients
+GROUP BY age_group
+ORDER BY age_group;
+
         """
     )
 
