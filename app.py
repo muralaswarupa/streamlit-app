@@ -13,11 +13,11 @@ st.set_page_config(
 
 def get_connection():
     return psycopg2.connect(
-        database="diabetes_db",  # Replace with your database name
-        user="postgres",         # Replace with your PostgreSQL username
-        password="swarupa",      # Replace with your PostgreSQL password
-        host="4.tcp.ngrok.io",   # Use the ngrok public host
-        port="10031"             # Use the ngrok public port
+        database="diabetes_database",  # Replace with your database name
+        user="avnadmin",         # Replace with your PostgreSQL username
+        password="AVNS_LIhj50SxYQlhRcueKDy",      # Replace with your PostgreSQL password
+        host="serverdmql-milestone2dmql.g.aivencloud.com",   # Use the ngrok public host
+        port="19151"             # Use the ngrok public port
     )
 
 
