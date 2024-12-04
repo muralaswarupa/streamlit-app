@@ -17,7 +17,7 @@ def get_connection():
         user="postgres",         # Replace with your PostgreSQL username
         password="swarupa",      # Replace with your PostgreSQL password
         host="4.tcp.ngrok.io",   # Use the ngrok public host
-        port="12756"             # Use the ngrok public port
+        port="10031"             # Use the ngrok public port
     )
 
 
